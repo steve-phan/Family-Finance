@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: family-finance
+  datasource:
+    url: jdbc:postgresql://localhost:5432/family_finance
+    username: family
+    password: family
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+        query:
+          fail_on_pagination_over_collection_fetch: true
+  flyway:
+    enabled: true
+
+server:
+  port: 8080
+  error:
+    include-message: never
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: never
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+app:
+  jwt:
+    secret: "change-me-to-a-long-random-secret-at-least-256-bits-long-please"
+    expiration-ms: 86400000
+  transfer:
+    max-amount: 10000.00

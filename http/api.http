@@ -1,0 +1,21 @@
+### Register family
+POST http://localhost:8080/api/auth/register-family
+Content-Type: application/json
+
+{
+  "familyName": "Muller",
+  "currency": "EUR",
+  "email": "anna@example.com",
+  "password": "secret123",
+  "firstName": "Anna",
+  "lastName": "Muller"
+}
+
+### Login
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "anna@example.com",
+  "password": "secret123"
+}

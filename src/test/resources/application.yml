@@ -1,0 +1,16 @@
+spring:
+  flyway:
+    enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+app:
+  jwt:
+    secret: test-secret-test-secret-test-secret-32b
+    expiration-ms: 3600000
+  transfer:
+    max-amount: 10000.00
+  allowance:
+    poll-ms: 3600000
